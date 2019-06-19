@@ -4,9 +4,9 @@ import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
 const routes = [
-  { path: "/", component: () => import("../components/Home") },
-  { path: "/signup", component: () => import("../components/Auth/SignUp") },
-  { path: "/signin", component: () => import("../components/Auth/SignIn") }
+  { path: "/", component: () => import("../components/Home/Home") },
+  { path: "/register", component: () => import("../components/Auth/Register") },
+  { path: "/login", component: () => import("../components/Auth/Login") }
 ];
 
 const router = new VueRouter({routes});
