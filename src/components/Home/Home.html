@@ -1,0 +1,21 @@
+<main id="main-container">
+  <header id="header-container">
+    <h1 class="header-title">Ideal Classroom</h1>
+    <span class="btn-group">
+      <router-link to="/register" class="button">Register</router-link>
+      <router-link to="/login" class="button">Log In</router-link>
+    </span>
+  </header>
+
+  <section class="carousel-container" tag="div">
+    <button id="prev" @click="previous">&lt;</button>
+    <button id="next" @click="next">&gt;</button>
+    <transition-group class="carousel">
+      <div v-for="slide in slides" :key="slide.id" class="carousel-item">
+        <h2 class="carousel-title">{{ slide.title }}</h2>
+        <i class="material-icons">{{ slide.icon }}</i>
+        <p class="carousel-content">{{ slide.content }}</p>
+      </div>
+    </transition-group>
+  </section>
+</main>

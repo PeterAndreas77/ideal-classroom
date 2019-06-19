@@ -1,0 +1,75 @@
+/* HEADER */
+#header-container {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: white;
+}
+
+.header-title {
+  font-size: 20px;
+}
+
+/* CAROUSEL */
+.carousel-container {
+  height: 100%;
+  padding: 0 20px;
+  color: white;
+  background-color: navy;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-item {
+  width: 33%;
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:first-of-type,
+.carousel-item:last-of-type {
+  opacity: 0;
+}
+
+/* ARROWS */
+#prev,
+#next {
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  border: none;
+  border-radius: 50%;
+  font-size: 36px;
+}
+
+#next {
+  right: 16px;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: blue;
+}
+
+#prev:focus,
+#next:focus {
+  background-color: blue;
+  outline: none;
+}
+
+.btn-group {
+  flex: 1;
+  text-align: right;
+}
